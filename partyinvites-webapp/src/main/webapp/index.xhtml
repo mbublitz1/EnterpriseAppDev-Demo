@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+	<title>My Party Invites</title>
+</head>
+<body>
+	I am going to have an exciting party. 
+	<br />
+	<img src="./resources/images/party.jpeg" />
+	<h:form>
+		<h:graphicImage value="/resources/images/party.jpeg" width="128px" height="128px" /> <!-- used to add graphic images  -->
+	
+		<h:link value="RSVP Now" outcome="rsvpForm" />
+	</h:form>
+</body>
+
+</html>

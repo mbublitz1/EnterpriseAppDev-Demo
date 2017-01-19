@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+	<title>RSVP Form</title>
+</head>
+
+<body>
+<!-- If you have input data that is submitted to server, h:form is required -->
+	<h:form>
+<!-- 	h:message is for feedback messages such a failure message  -->
+		<h:message id="messages" />
+		<div>
+<!-- 			h:outputLabel Generates HTML element -->
+			<h:outputLabel for="name">Your Name</h:outputLabel>
+<!-- 		h:inputText is an input textbox -->
+			<h:inputText id="name" />
+		</div>
+		<div>
+			<h:outputLabel for="email">Your Email</h:outputLabel>
+			<h:inputText id="email" />
+		</div>
+			<div>
+			<h:outputLabel for="phone">Your Phone</h:outputLabel>
+			<h:inputText id="phone" />
+		</div>
+		<div>
+			<h:outputLabel for="willAttend">Will Attend</h:outputLabel>
+			<h:selectOneRadio id="willAttend">
+				<f:selectItem itemValue="true" itemLabel= "Yes" />
+				<f:selectItem itemValue="false" itemLabel = "No" />
+			</h:selectOneRadio>
+		</div>
+		<h:commandButton value="Submit RSVP" />
+	</h:form>
+</body>
+
+</html>
