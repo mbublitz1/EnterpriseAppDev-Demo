@@ -41,6 +41,6 @@ public class GuestResponse {
 		this.willAttend = willAttend;
 	}
 	
-	
+	//something something
 
 }
