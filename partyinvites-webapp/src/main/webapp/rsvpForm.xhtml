@@ -19,11 +19,11 @@
 <!-- 			h:outputLabel Generates HTML element -->
 			<h:outputLabel for="name">Your Name</h:outputLabel>
 <!-- 		h:inputText is an input textbox -->
-			<h:inputText id="name" />
+			<h:inputText id="name" value="#{rsvpFormController.guestResponse.name}" /> <!-- "#{}" is known as JSF language, will detect all java classes -->
 		</div>
 		<div>
 			<h:outputLabel for="email">Your Email</h:outputLabel>
-			<h:inputText id="email" />
+			<h:inputText id="email" value="#{rsvpFormController.guestResponse./>
 		</div>
 			<div>
 			<h:outputLabel for="phone">Your Phone</h:outputLabel>
