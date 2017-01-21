@@ -1,6 +1,10 @@
 package ca.nait.domain;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Email;
 
 public class GuestResponse {
 	
@@ -11,6 +15,7 @@ public class GuestResponse {
 	@Email(message="Please enter a valid email address")
 	private String email;
 	@NotBlank(message="Please enter your phone number")
+	@Pattern(regexp="^\\D?(\\d{3})\\D?\\D?(\\d{3})\\D?(\\d{4})$", message="Please enter a valid phone number")
 	private String phone;
 	@NotNull (message="Please select whether you'll attend")
 //	Using Boolean is a wrapper that will handle nullable values
