@@ -45,6 +45,12 @@ public class GuestResponse {
 	public void setWillAttend(Boolean willAttend) {
 		this.willAttend = willAttend;
 	}
+	@Override
+	public String toString() {
+		return "GuestResponse [name=" + name + ", email=" + email + ", phone=" + phone + ", willAttend=" + willAttend
+				+ "]";
+	}
+	
 	
 	//something something
 

@@ -28,7 +28,8 @@ public class RsvpFormController {
 	//an "actionListener" does not return a value and navigation stays on the same page
 	public String submitForm()
 	{
-		return "/thanks";
+		System.out.println(guestResponse);
+		return "/thanks?faces-redirect=true"; // this allows pages to be book markable otherwise the address will never change in the address bar>
 	}
 	
 	
