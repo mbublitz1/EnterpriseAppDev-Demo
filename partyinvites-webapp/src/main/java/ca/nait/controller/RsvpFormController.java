@@ -24,6 +24,8 @@ public class RsvpFormController {
 		this.guestResponse = guestResponse;
 	}
 
+	//an "action" method returns a String to the next page
+	//an "actionListener" does not return a value and navigation stays on the same page
 	public String submitForm()
 	{
 		return "/thanks";

@@ -23,7 +23,7 @@
 		</div>
 		<div>
 			<h:outputLabel for="email">Your Email</h:outputLabel>
-			<h:inputText id="email" value="#{rsvpFormController.guestResponse/>
+			<h:inputText id="email" value="#{rsvpFormController.guestResponse.phone}" />
 		</div>
 			<div>
 			<h:outputLabel for="phone">Your Phone</h:outputLabel>
@@ -31,8 +31,8 @@
 		</div>
 		<div>
 			<h:outputLabel for="willAttend">Will Attend</h:outputLabel>
-			<h:selectOneRadio id="willAttend">
-				<f:selectItem itemValue="true" itemLabel= "Yes" />
+			<h:selectOneRadio id="willAttend" value="#{rsvpFormController.guestResponse.willAttend}">
+				<f:selectItem itemValue="true" itemLabel= "Yes" /> 
 				<f:selectItem itemValue="false" itemLabel = "No" />
 			</h:selectOneRadio>
 		</div>
