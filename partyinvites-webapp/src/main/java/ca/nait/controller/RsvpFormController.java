@@ -3,6 +3,7 @@ package ca.nait.controller;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
+import Helper.Gmail;
 import ca.nait.domain.GuestResponse;
 
 //mark this class as a JSF CDI-managed bean class
@@ -29,6 +30,21 @@ public class RsvpFormController {
 	public String submitForm()
 	{
 		System.out.println(guestResponse);
+		Gmail mailer = new Gmail("test@test.com", "MyPassword");
+		String mailMessage = "";
+		if(guestResponse.getWillAttend())
+		{
+			mailMessage = "It's great that you're coming to my party.  Thank you, you are awesome";
+		}
+		else
+		{
+			mailMessage = "Sorry to hear that you can't make it.  A gift is still expected";
+		}
+		try {
+			mailer.sendmail("test@test.com", guestResponse.getEmail(), "Party Invitation", mailMessage);
+		} catch (Exception e) {
+			System.out.println("Cannot send Email");
+		}
 		return "/thanks?faces-redirect=true"; // this allows pages to be book markable otherwise the address will never change in the address bar>
 	}
 	
